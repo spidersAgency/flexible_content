@@ -6,10 +6,11 @@
  * Author:          Maciej Palmowski
  * Author URI:      https://spiders.agency
  * Text Domain:     flexible-content
- * Version:         1.0
+ * Version:         1.1
  *
  * @package         flexible-content
  */
+include( 'sa-flex-options.php' );
 
 class FlexibleContent {
 	function __construct( $id ) {
@@ -29,6 +30,8 @@ class FlexibleContent {
 			// loop through the rows of data
 			while ( have_rows( $this->field_name, $this->id ) ) {
 				the_row();
+				global $post;
+				$post = get_post( $this->id );
 				include ( $this->template_file );
 			}
 		}

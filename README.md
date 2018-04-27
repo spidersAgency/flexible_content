@@ -29,3 +29,10 @@ if ( 'text' == get_row_layout() ) {
 Timber::render( 'views/flex/'.$tpl.'.twig', $flex );
 unset( $flex );
 ```
+
+## Rebuilding posts
+If you want to rebuild all the posts go to `options > Flexible Content` and click *Submit*.
+
+## Changelog
+1.1 - Added posibility to rebuid all posts
+1.0 - Inital version
